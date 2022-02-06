@@ -14,13 +14,13 @@
   }
 
   @include breakpoint-up(large) {
-   
-
+    margin-top: 2rem;
+    // margin-bottom: 4rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 1.5rem;
     background-color: $card_bg;
-    height: 45%;
+    height:97%;
     width: 25%;
     border-radius: 1rem;
   }
@@ -36,8 +36,8 @@
     cursor: pointer;
 
     &:hover {
-      backdrop-filter: blur(10px);
-      filter: blur(4px);
+      backdrop-filter: blur(3px);
+      filter: blur(2px);
       transition: 0.5s ease;
       // background-repeat: no-repeat;
       background-image: url("../images/image-equilibrium.jpg"), url('../images/icon-view.svg');
@@ -87,7 +87,7 @@
   }
   &__time {
     cursor: pointer;
-    color: $linecolor;
+    color: $softblue;
 
     div {
       margin-left: 0.3rem;
@@ -110,8 +110,10 @@
     }
     .bio {
       margin-left: 1rem;
+      color: $softblue;
       span {
         cursor: pointer;
+        color: $white;
         &:hover {
           color: $cyan;
         }
