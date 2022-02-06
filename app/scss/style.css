@@ -83,6 +83,9 @@ html {
 }
 
 body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   width: 100vw;
   height: 100vh;
   color: black;
@@ -107,7 +110,12 @@ body {
 @media (min-width: 64em) {
   body {
     font-size: 0.778rem;
+    overflow-x: hidden;
   }
+}
+
+body.noscroll {
+  overflow: hidden;
 }
 
 h1,
@@ -291,12 +299,7 @@ button:hover,
 
 @media (min-width: 40em) {
   .nft {
-    position: absolute;
-    /* or absolute */
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    margin-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 1.5rem;
@@ -320,10 +323,10 @@ button:hover,
 }
 
 .nft__image:hover {
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   background-image: url("../images/image-equilibrium.jpg"), url("../images/icon-view.svg");
@@ -386,7 +389,7 @@ button:hover,
 
 .nft__time {
   cursor: pointer;
-  color: #8bacda;
+  color: #2f415b;
   font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,7 +424,7 @@ button:hover,
 
 .nft__creator .bio {
   margin-left: 1rem;
-  color: #8bacda;
+  color: #2f415b;
 }
 
 .nft__creator .bio span {

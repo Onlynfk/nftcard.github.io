@@ -11,7 +11,8 @@ html {
 }
 
 body {
- 
+  display: grid;
+  place-items: center;
   width: 100vw;
   height: 100vh;
   color: black;
@@ -30,9 +31,12 @@ body {
 
   @include breakpoint-up(large) {
     font-size: $font;
+    overflow-x: hidden;
   }
 
- 
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 h1,

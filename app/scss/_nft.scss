@@ -1,28 +1,26 @@
 .nft {
-  @include breakpoint-down(small) {
+  @include breakpoint-down(small){
     padding-left: 0rem;
-    padding-right: 0rem;
-    padding-top: 0rem;
-    background-color: $card_bg;
-    height: 100%;
-    overflow: hidden;
-    width: 100%;
-    border-radius: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.5rem;
+  padding-right: 0rem;
+  padding-top: 0rem;
+  background-color: $card_bg;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.5rem;
   }
 
   @include breakpoint-up(medium) {
-    position: absolute; /* or absolute */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 2rem;
+    // margin-bottom: 4rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 1.5rem;
     background-color: $card_bg;
-    height: 90%;
+    height:90%;
     width: 25%;
     border-radius: 1rem;
   }
@@ -38,12 +36,11 @@
     cursor: pointer;
 
     &:hover {
-      backdrop-filter: blur(3px);
-      filter: blur(2px);
+      backdrop-filter: blur(5px);
+      filter: blur(4px);
       transition: 0.5s ease;
       // background-repeat: no-repeat;
-      background-image: url("../images/image-equilibrium.jpg"),
-        url("../images/icon-view.svg");
+      background-image: url("../images/image-equilibrium.jpg"), url('../images/icon-view.svg');
       // background-blend-mode: hard-light;
       // background-size: contain;
     }
@@ -90,7 +87,7 @@
   }
   &__time {
     cursor: pointer;
-    color: $softblue;
+    color: $linecolor;
 
     div {
       margin-left: 0.3rem;
@@ -113,7 +110,7 @@
     }
     .bio {
       margin-left: 1rem;
-      color: $softblue;
+      color: $linecolor;
       span {
         cursor: pointer;
         color: $white;
