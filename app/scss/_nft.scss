@@ -1,0 +1,121 @@
+.nft {
+  @include breakpoint-down(small){
+    padding-left: 0rem;
+  padding-right: 0rem;
+  padding-top: 0rem;
+  background-color: $card_bg;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.5rem;
+  }
+
+  @include breakpoint-up(large) {
+   
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1.5rem;
+    background-color: $card_bg;
+    height: 45%;
+    width: 25%;
+    border-radius: 1rem;
+  }
+
+  &__image {
+    place-items: center;
+    height: 335px;
+    width: 335px;
+    background-image: url("../images/image-equilibrium.jpg");
+    background-size: contain;
+    object-fit: contain;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &:hover {
+      backdrop-filter: blur(10px);
+      filter: blur(4px);
+      transition: 0.5s ease;
+      // background-repeat: no-repeat;
+      background-image: url("../images/image-equilibrium.jpg"), url('../images/icon-view.svg');
+      // background-blend-mode: hard-light;
+      // background-size: contain;
+    }
+
+    @include breakpoint-up(medium) {
+      height: 310px;
+      width: 310px;
+      object-fit: contain;
+      border-radius: 15px;
+    }
+  }
+  &__title {
+    padding-top: 1rem;
+    font-size: $font_lg;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    &:hover {
+      color: $cyan;
+    }
+  }
+  &__description {
+    color: $softblue;
+    line-height: 1;
+    font-size: 1.35rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 300;
+    height: fit-content;
+    width: 85%;
+  }
+  &__coin {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      color: $cyan;
+    }
+    div {
+      margin-left: 0.4rem;
+    }
+  }
+  &__time {
+    cursor: pointer;
+    color: $linecolor;
+
+    div {
+      margin-left: 0.3rem;
+    }
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__creator {
+    margin-top: 1rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    .image {
+      border: 1px solid $white;
+      border-radius: 1.5rem;
+    }
+    .bio {
+      margin-left: 1rem;
+      span {
+        cursor: pointer;
+        &:hover {
+          color: $cyan;
+        }
+      }
+    }
+  }
+}
